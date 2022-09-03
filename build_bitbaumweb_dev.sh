@@ -22,7 +22,7 @@ git reset origin/$BRANCH --hard
 
 # Check for concurrent build process
 counter=0
-while test -f ~/bin/build_process_running.lock
+while test -f ~/bin/website-build/build_process_running.lock
 do
         timespent=$(expr $counter \* $PATIENCE)
         echo "$(date) $BRANCH spent $timespent seconds waiting. Now waiting another $PATIENCE seconds for other BUILD to finish." | tee -a ~/logs/$LOGFILE
@@ -94,4 +94,4 @@ fi
 
 echo "$(date) $BRANCH Build Script ended." | tee -a ~/logs/$LOGFILE
 
-rm ~/bin/build_process_running.lock
+rm ~/bin/website-build/build_process_running.lock
