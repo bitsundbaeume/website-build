@@ -34,7 +34,7 @@ do
 done
 
 # Get Lock
-echo "$(date) $BRANCH build process is running" > ~/bin/build_process_running.lock
+echo "$(date) $BRANCH build process is running" > ~/bin/website-build/build_process_running.lock
 
 
 echo "RUNNING npm install"
